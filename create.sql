@@ -29,16 +29,16 @@ insert into user values (1,"stud1","stud1","password","stud1@iiitb.ac.in",1),(2,
 
 create table equipment (
 	surrogate_id int NOT NULL,
-    equipment_id int,
+    equipment_id varchar(10),
     equipment_category varchar(30),
     sports_team TINYINT(1),
-    -- tinyint 0 is false 1 is true 
+    -- tinyint 0 is false else is true 
     equipment_status varchar(30),
     equipment_description TEXT,
     constraint pk_equipment PRIMARY KEY (surrogate_id)
 );
 
-insert into equipment values (1,1,"Football", 0 ,"available","Football is a very Popular game"),(2,2,"Football", 1 ,"available","Football is a very Popular game"),(3,3,"Basketball", 0 ,"issued","Basketball is orange colored");
+insert into equipment values (1,"F1","Football", 0 ,"available","Football is a very Popular game"),(2,"F2","Football", 1 ,"available","Football is a very Popular game"),(3,"BB1","Basketball", 0 ,"issued","Basketball is orange colored");
 
 create table requests (
     surrogate_id int NOT NULL,
