@@ -44,7 +44,6 @@ insert into equipment (equipment_id,equipment_category,sports_team,equipment_sta
 
 create table requests (
     surrogate_id int NOT NULL AUTO_INCREMENT,
-    request_id int,
     -- fk
     id_user varchar(30),
     id_equipment varchar(10),
@@ -55,7 +54,7 @@ create table requests (
     constraint pk_requests PRIMARY KEY (surrogate_id)
 );
 
-insert into requests (request_id,id_user,id_equipment,issue_date,return_date,request_status) values (1,"stud1","F1",'2021-10-02','2021-10-08',"closed"),(2,"stud2","F2",'2021-10-02',NULL,"open"),(3,"stud2","BB1",'2021-10-02','2021-10-08',"closed");
+insert into requests (id_user,id_equipment,issue_date,return_date,request_status) values ("stud1","F1",'2021-10-02','2021-10-08',"closed"),("stud2","F2",'2021-10-02',NULL,"open"),("stud2","BB1",'2021-10-02','2021-10-08',"closed");
 
 create table user_role (
     surrogate_id int NOT NULL AUTO_INCREMENT,
