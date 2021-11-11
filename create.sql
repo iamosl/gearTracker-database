@@ -18,7 +18,7 @@ create table user (
     user_id varchar(30),
     UNIQUE(user_id),
     name varchar(50),
-    passwrd varchar(30) NOT NULL,
+    passwrd varchar(30),
     email varchar(50),
     -- fk
     student int,
@@ -45,8 +45,8 @@ insert into equipment (equipment_id,equipment_category,sports_team,equipment_sta
 create table requests (
     surrogate_id int NOT NULL AUTO_INCREMENT,
     -- fk
-    id_user varchar(30),
-    id_equipment varchar(10),
+    id_user int,
+    id_equipment int,
     -- fk
     issue_date date,
     return_date date,
@@ -54,15 +54,15 @@ create table requests (
     constraint pk_requests PRIMARY KEY (surrogate_id)
 );
 
-insert into requests (id_user,id_equipment,issue_date,return_date,request_status) values ("stud1","F1",'2021-10-02','2021-10-08',"closed"),("stud2","F2",'2021-10-02',NULL,"open"),("stud2","BB1",'2021-10-02','2021-10-08',"closed");
+insert into requests (id_user,id_equipment,issue_date,return_date,request_status) values (1,1,'2021-10-02','2021-10-08',"closed"),(4,2,'2021-10-02',NULL,"open"),(4,3,'2021-10-02','2021-10-08',"closed");
 
 create table user_role (
     surrogate_id int NOT NULL AUTO_INCREMENT,
     -- fk
-    id_user varchar(30),
+    id_user int,
     -- fk
     role varchar(20),
     constraint pk_user_role PRIMARY KEY (surrogate_id)
 );
 
-insert into user_role (id_user,role) values ("stud1","student"),("admin1","admin"),("sportscomm1","sportscomm"),("stud2","student");
+insert into user_role (id_user,role) values (1,"student"),(2,"admin"),(3,"sportscomm"),(4,"student");
