@@ -72,7 +72,7 @@ create table requests (
     constraint pk_requests PRIMARY KEY (surrogate_id)
 );
 
-insert into requests (id_user,id_equipment,issue_date,return_date,request_status) values (5,5,"2021-10-31",NULL,"open"),(5,6,'2021-11-01',NULL,"approved"),(6,3,'2021-12-04',NULL,"approved"),(6,4,'2021-11-30',NULL,"approved"),(7,1,'2021-11-30','2021-12-02',"closed"),(8,2,'2021-12-03','2021-12-04',"closed"),(9,7,'2021-11-07','2021-11-14',"closed"),(9,7,'2021-11-15','2021-11-17',"closed"),(10,8,'2021-11-05','2021-11-10',"closed"),(10,9,'2021-11-10','2021-11-14',"closed");
+insert into requests (id_user,id_equipment,issue_date,return_date,request_status) values (5,5,NULL,NULL,"open"),(5,6,'2021-11-01',NULL,"approved"),(6,3,'2021-12-04',NULL,"approved"),(6,4,'2021-11-30',NULL,"approved"),(7,1,'2021-11-30','2021-12-02',"closed"),(8,2,'2021-12-03','2021-12-04',"closed"),(9,7,'2021-11-07','2021-11-14',"closed"),(9,7,'2021-11-15','2021-11-17',"closed"),(10,8,'2021-11-05','2021-11-10',"closed"),(10,9,'2021-11-10','2021-11-14',"closed");
 
 create table user_role (
     surrogate_id int NOT NULL AUTO_INCREMENT,
