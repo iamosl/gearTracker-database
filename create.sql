@@ -11,7 +11,7 @@ create table student (
 
 );
 
-insert into student (fine,sports_team) values (0,0),(0,1),(0,0),(0,1),(0,0),(0,0);
+insert into student (fine,sports_team) values (1,0),(2,1),(3,0),(4,1),(5,0),(0,0);
 
 create table user (
 	surrogate_id int NOT NULL AUTO_INCREMENT,
