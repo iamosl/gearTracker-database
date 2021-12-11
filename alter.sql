@@ -18,7 +18,7 @@ alter table requests
 ADD constraint fk_req_user FOREIGN KEY (id_user) references user(surrogate_id) ON DELETE CASCADE;
 
 alter table requests
-ADD constraint fk_req_equip FOREIGN KEY (id_equipment) references equipment(surrogate_id);
+ADD constraint fk_req_equip FOREIGN KEY (id_equipment) references equipment(surrogate_id) ON DELETE CASCADE;
 
 alter table requests
 ADD COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
