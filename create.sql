@@ -36,7 +36,8 @@ insert into user (user_id,name,password,email,student) values
 ("stud3","stud3","stud3","stud3@iiitb.ac.in",3),
 ("stud4","stud4","stud4","stud4@iiitb.ac.in",4),
 ("stud5","stud5","stud5","stud5@iiitb.ac.in",5),
-("stud6","stud6","stud6","stud6@iiitb.ac.in",6);
+("stud6","stud6","stud6","stud6@iiitb.ac.in",6),
+("instructor1","instructor1","instructor1","instructor1@iiitb.ac.in",NULL);
 
 create table equipment (
 	surrogate_id int NOT NULL AUTO_INCREMENT,
@@ -83,4 +84,4 @@ create table user_role (
     constraint pk_user_role PRIMARY KEY (surrogate_id)
 );
 
-insert into user_role (id_user,role) values (1,"admin"),(2,"admin"),(3,"sportscomm"),(4,"sportscomm"),(5,"student"),(6,"student"),(7,"student"),(8,"student"),(9,"student"),(10,"student");
+insert into user_role (id_user,role) values (1,"admin"),(2,"admin"),(3,"sportscomm"),(4,"sportscomm"),(5,"student"),(6,"student"),(7,"student"),(8,"student"),(9,"student"),(10,"student"),(11,"instructor");
