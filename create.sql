@@ -29,14 +29,12 @@ create table user (
 insert into user (user_id,name,password,email,student) values 
 ("admin1","admin1","admin1","admin1@iiitb.ac.in",NULL),
 ("admin2","admin2","admin2","admin2@iiitb.ac.in",NULL),
-("sportscomm1","sportscomm1","sportscomm1","sportscomm1@iiitb.ac.in",NULL),
-("sportscomm2","sportscomm2","sportscomm2","sportscomm2@iiitb.ac.in",NULL),
+("sportscomm1","sportscomm1","sportscomm1","sportscomm1@iiitb.ac.in",5),
+("sportscomm2","sportscomm2","sportscomm2","sportscomm2@iiitb.ac.in",6),
 ("stud1","stud1","stud1","stud1@iiitb.ac.in",1),
 ("stud2","stud2","stud2","stud2@iiitb.ac.in",2),
 ("stud3","stud3","stud3","stud3@iiitb.ac.in",3),
 ("stud4","stud4","stud4","stud4@iiitb.ac.in",4),
-("stud5","stud5","stud5","stud5@iiitb.ac.in",5),
-("stud6","stud6","stud6","stud6@iiitb.ac.in",6),
 ("instructor1","instructor1","instructor1","instructor1@iiitb.ac.in",NULL);
 
 create table equipment (
@@ -73,7 +71,7 @@ create table requests (
     constraint pk_requests PRIMARY KEY (surrogate_id)
 );
 
-insert into requests (id_user,id_equipment,issue_date,return_date,request_status) values (5,5,NULL,NULL,"open"),(5,6,'2021-11-01',NULL,"approved"),(6,3,'2021-12-04',NULL,"approved"),(6,4,'2021-11-30',NULL,"approved"),(7,1,'2021-11-30','2021-12-02',"closed"),(8,2,'2021-12-03','2021-12-04',"closed"),(9,7,'2021-11-07','2021-11-14',"closed"),(9,7,'2021-11-15','2021-11-17',"closed"),(10,8,'2021-11-05','2021-11-10',"closed"),(10,9,'2021-11-10','2021-11-14',"closed");
+insert into requests (id_user,id_equipment,issue_date,return_date,request_status) values (5,5,NULL,NULL,"open"),(5,6,'2021-11-01',NULL,"approved"),(6,3,'2021-12-04',NULL,"approved"),(6,4,'2021-11-30',NULL,"approved"),(7,1,'2021-11-30','2021-12-02',"closed"),(8,2,'2021-12-03','2021-12-04',"closed"),(3,7,'2021-11-07','2021-11-14',"closed"),(3,7,'2021-11-15','2021-11-17',"closed"),(4,8,'2021-11-05','2021-11-10',"closed"),(4,9,'2021-11-10','2021-11-14',"closed");
 
 create table user_role (
     surrogate_id int NOT NULL AUTO_INCREMENT,
@@ -84,4 +82,4 @@ create table user_role (
     constraint pk_user_role PRIMARY KEY (surrogate_id)
 );
 
-insert into user_role (id_user,role) values (1,"admin"),(2,"admin"),(3,"sportscomm"),(4,"sportscomm"),(5,"student"),(6,"student"),(7,"student"),(8,"student"),(9,"student"),(10,"student"),(11,"instructor");
+insert into user_role (id_user,role) values (1,"admin"),(2,"admin"),(3,"sportscomm"),(3,"student"),(4,"sportscomm"),(4,"student"),(5,"student"),(6,"student"),(7,"student"),(8,"student"),(9,"instructor");
